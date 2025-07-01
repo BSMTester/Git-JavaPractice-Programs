@@ -9,8 +9,22 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                sh 'mvn clean install -DskipTests'
+                echo 'BUILDING....'
+                 sh 'mvn clean install -DskipTests'
             }
+        }
+            stage('Test') {
+            steps {
+                echo 'TESTING.....'
+               
+            }
+            }   
+        stage('Deploy') {
+            steps {
+                echo 'DEPLOYING.....'
+               
+            }
+            }   
         }
     }
 
